@@ -1,73 +1,106 @@
-# React + TypeScript + Vite
+# CipherLens - Password Security Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CipherLens is a modern and interactive password security analyzer that evaluates password strength using real-world cybersecurity principles. It combines entropy-based analysis with advanced pattern detection and integrates industry-grade techniques to provide accurate and meaningful feedback.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Live Demo
 
-## React Compiler
+👉 https://cipherlens-sooty.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Real-time password strength analysis
+* Entropy-based evaluation (randomness measurement)
+* Integration with zxcvbn for advanced password analysis
+* Detection of weak patterns:
+* Sequential patterns (e.g., 123, abc, 654)
+* Repeated characters and substrings
+* Common words and predictable structures
+* Smart suggestions to improve password strength
+* Clean, modern, and responsive UI
+* Instant feedback as you type
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+##  How It Works
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+CipherLens analyzes passwords using a combination of:
+
+Entropy calculation to measure randomness
+Pattern detection to identify predictable structures
+* **zxcvbn integration** to simulate real-world attack strategies (dictionary attacks, pattern-based guesses, etc.)
+
+This hybrid approach ensures that passwords are evaluated not just mathematically, but also from an attacker’s perspective.
+
+---
+
+## Tech Stack
+
+* React
+* TypeScript
+* Vite
+* CSS / Tailwind
+* zxcvbn (advanced password strength estimation)
+
+---
+
+## Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Madhuriiiii/cipherlens.git
+cd cipherlens
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## Project Structure
+
+```
+cipherlens/
+ ├── src/
+ │    ├── components/
+ │    ├── hooks/
+ │    ├── utils/
+ │    ├── App.tsx
+ │    └── main.tsx
+ ├── public/
+ ├── index.html
+ ├── package.json
+ └── vite.config.ts
+```
+
+---
+
+## Purpose:
+
+This project demonstrates practical cybersecurity concepts such as password entropy, attack-aware analysis, and real-time feedback systems in an interactive web application.
+
+
+## Author:
+
+**Madhuri**    
+This project marked an early step in my cybersecurity career in exploring cybersecurity concepts through hands-on development.
+
+GitHub: https://github.com/Madhuriiiii
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving it a ⭐ on GitHub!
